@@ -45,12 +45,14 @@
 
 <p>Ik kreeg later twee API’s van Erik als tip om naar te kijken en heb mij op een van deze API’s verder op in verdiept. De eerste API die wij onderzochten was een pure Python API genaamd <b>SpeechRecognition</b>[6]. Het is een high-level API waarmee heel eenvoudig STT uitgevoerd kan worden d.m.v. verschillende spraakherkenning engins. De tweede API was <b>PocketSphinx</b>[7][8]. Deze API blijkt, na een aantal artikelen en reacties op het web te hebben gelezen, een best volwassen STT / Text-to-speech (TTS) API te zijn. De API is primair geschreven in de programmeertaal C, maar heeft ook versies naar andere programmeertalen. Tot zover lijkt dit het meest voor de hand liggende API te zijn die ons kan helpen bij het behalen van ons doel. Het zou goed kunnen dat we uiteindelijk SpeechRecognition samen met PocketSphinx zullen gebruiken, omdat SpeechRecognition ook onder andere functies voor het gebruik van PocketSphinx API bevat.</p>
 
+<p>De bevindingen over de TTS API’s heb ik gepresenteerd op vrijdag in week 4.[9]</p>
+
 <p>Naast de werkzaamheden rondom het project heb ik tijdens deze sprint de data camp volledig afgerond. Ook ben ik verder gegaan met de coursera machine learning course en heb het gradient descent deel afgerond. Ik loop hier hierbij een week achter, dus zal dit in sprint 3 z.s.m. inhalen.</p>
 
 <h2>Sprint 3 (24-09-2018 – 05-10-2018)</h2>
-<p>Voor deze sprint was het de bedoeling al wat ‘vatbare’ synthetische data te hebben gecreëerd en deze wellicht ook gebruikt te hebben. We hebben een heel Nederlandse language model[9], dictionary[10] en een acoustic model[11] gedownload[12]. Dit zijn de onderdelen waar PocketSphinx gebruik van maakt bij het herkennen van spraak.</p>
+<p>Voor deze sprint was het de bedoeling al wat ‘vatbare’ synthetische data te hebben gecreëerd en deze wellicht ook gebruikt te hebben. We hebben een heel Nederlandse language model[10], dictionary[11] en een acoustic model[12] gedownload[13]. Dit zijn de onderdelen waar PocketSphinx gebruik van maakt bij het herkennen van spraak.</p>
 
-<p>Door een snelle ‘plug&play’ test[12][13] op PocketSphinx (Sphinx4, de Java versie van PocketSphinx) te hebben uitgevoerd, blijkt dat de woorden en zinnen die we uitspreken redelijk worden herkend. In een niet eens al te druk lokaal wordt de spraakherkenning al snel slechter, is ons opgevallen.</p>
+<p>Door een snelle ‘plug&play’ test[14][15] op PocketSphinx (Sphinx4, de Java versie van PocketSphinx) te hebben uitgevoerd, blijkt dat de woorden en zinnen die we uitspreken redelijk worden herkend. In een niet eens al te druk lokaal wordt de spraakherkenning al snel slechter, is ons opgevallen.</p>
 
 <p>We hebben het dictionary bestand geopend in IntelliJ (omdat het PocketSphinx project daarin open was) en die heeft ons 40.000 woorden getoond  (uiteindelijk bleek dit 1.4 miljoen te zijn nadat we pas later het bestand met nano tekst editor geopend hebben). Dat leek ons heel weinig. We hebben daarom als doel bepaald de bestaande dictionary, acoustic model en language model uit te breiden en kijken hoe PocketSphinx zal reageren qua spraakherkenning op de door ons geproduceerde data.</p>
 
@@ -62,7 +64,7 @@
 
 <p>We hebben ons ten eerste verdiept in de structuur van een dictionary bestand. Erik heeft zich verdiept in de klanken, hoe die opgebouwd worden in een dictionary bestand en verschillende tussen bijv. Engelse en Nederlandse klanken in een dictionary bestand. Ik heb mij verdiept in de tools[15] <i>(hoofdstukken Dictionary, G2P tool Phonetisaurus en G2P tool g2p-seq2seq)</i> waarmee een model getraind kan worden die vervolgens gebruikt kan worden om een bestaand dictionary bestand uit te breiden.</p>
 
-<p>We hebben uiteindelijk de tool g2p-seq2seq[16] gebruikt om het model met de Nederlandse dictionary te trainen. Samen met Jesse heb ik twee scripts[17][18] geschreven die de data in de juiste, bruikbare format processen[19].
+<p>We hebben uiteindelijk de tool g2p-seq2seq[17] gebruikt om het model met de Nederlandse dictionary te trainen. Samen met Jesse heb ik twee scripts[18][19] geschreven die de data in de juiste, bruikbare format processen[20].
 
 <p>Bij het trainingsproces met g2p-seq2seq heb ik voor het eerst de mogelijkheid gehad om zelf een machine learning proces te initialiseren en te runnen. Ik heb door dit mee te maken een veel beter beeld gekregen van wat het eigenlijk betekent een ‘model trainen’ en hoeveel moeite het bedraagt om door allerlei excepties en errors heen te gaan, voordat de gebruikte tools kunnen beginnen met het trainen van een model.</p>
 
@@ -75,7 +77,16 @@
 
 <p>Ik ben mij na het gesprek met Roelant gaan focussen op de spraakherkenningstool Kaldi. We hebben deze tool in eerste instantie voorbij zien komen, maar besteedden er niet veel aandacht aan, doordat wij het doodlopende pad met PocketSphinx namen.</p>
 
-<p>We hebben een stappenplan gemaakt waarbij we stap voor stap gingen kijken naar Mel Frequenciy Cepstral Coefficient (MFCC), WIndow Framing en  Fourier Transformatie. Hierbij hebben we de taken verdeeld. Ik ging kijken naar de mogelijkheid om Mel Frequencies te kunnen genereren met behulp van Kaldi. Hierbij heb ik ook uitgezocht of Kaldi MFCC functionaliteit ook van de Window Framing functie gebruik maakte[21]. Dit bleek wel het geval te zijn. Snel heb ik een test opgezet die op basis van een 4 seconden audio die Mel Frequencies genereerde. De Mel Frequencies zijn float getallen. 
+<p> Het idee tijdens deze sprint was om meerdere technieken te gebruiken om tot het genereren en classificeren van diphonen te komen. We zullen op basis van phoneme boundaries overgang van de ene phoneme naar de andere detecteren en deze kunnen classificeren.[22]</p>
+
+<p>We hebben een stappenplan gemaakt waarbij we stap voor stap gingen kijken naar Mel Frequenciy Cepstral Coefficient (MFCC), Window Framing en Fourier Transformatie. Ik ging kijken naar de mogelijkheid om Mel Frequencies te kunnen genereren met behulp van Kaldi. Hierbij heb ik ook uitgezocht of Kaldi MFCC functionaliteit ook van de Window Framing functie gebruik maakte[23]. Dit bleek wel het geval te zijn. Snel heb ik een test opgezet die op basis van een 4 seconden audio die Mel Frequencies genereerde. De Mel Frequencies zijn float getallen. Deze float getallen die uit de resultaten waren gekomen heb ik geplot[24].
+
+<h2>Sprint 5 (29-10-2018 – 16-11-2018)</h2>
+<p>Deze sprint hebben mijn groep en ik afgesproken dat we aan twee paden tegelijk gaan werken. Mijn teamgenoten gingen door met het idee van de afgelopen sprint (4) en we hebben gezamenlijk afgesproken dat ik mij verder ging verdiepen in Kaldi.</p> 
+
+<p>Ik heb in de eerste week de ‘Kaldi for Dummies tutorial’[25] gevolgd om de eerste spraakherkenning met Kaldi op te zetten. Ik koos er voor om de tutorial een klein beetje te tweaken en daarbij de Nederlandse versie spraakherkenning uit te proberen in plaats van de Engelse. Hierbij liep ik tegen tal errors aan die ik stuk voor stuk probeerde op te lossen, maar uiteindelijk heb ik besloten dat ik de tutorial gewoon in het Engels ga doen, zoals het oorspronkelijk op de website staat.</p>
+
+<p>De voortgang van het project en de toekomstige doelen hebben Erik en ik met de klas gedeeld tijdens de presentatie in de eerste week, week 9.[26]</p>
 
 <h1>Referentielijst</h1>
 [1] https://www.afasienet.com/mensen/afasie/over-afasie/ 
@@ -86,16 +97,21 @@
 [6] https://pypi.org/project/SpeechRecognition/ 
 [7] https://github.com/cmusphinx/pocketsphinx 
 [8] https://cmusphinx.github.io/wiki/tutorial/ 
-[9] https://cmusphinx.github.io/wiki/tutoriallm/#language-models
-[10] https://cmusphinx.github.io/wiki/tutorialdict/ 
-[11] https://en.wikipedia.org/wiki/Acoustic_model 
-[12] <h2> Verwijs naar Voxforge_nl download pagina </h2>
-[13] https://cmusphinx.github.io/wiki/tutorialsphinx4/#basic-usage 
-[14] https://cmusphinx.github.io/wiki/tutorialsphinx4/#livespeechrecognizer 
-[15] <h2> Verwijs naar het document over G2P tools </h2>
-[16] https://github.com/cmusphinx/g2p-seq2seq 
-[17] <h2> Verwijs naar het script dat UvA zinnen split in woorden en in new_dict opslaat </h2>
-[18] <h2> Verwijs naar het script dat lege wit-regels verwijderd uit het new_dict bstand </h2>
-[19] <h2> Verwijs naar het document Beschrijving_UvA_data_processing.docx (dropbox) </h2>
-[20] <h2> Verwijs naar het document gesprek met Roelant Ossewaarde over Afasie </h2>
-[21] <h2> Verwijs naar het document op drive over Kaldi window framing </h2>
+[9] <h2> Verwijs naar de 1e presentatie </h2>
+[10] https://cmusphinx.github.io/wiki/tutoriallm/#language-models
+[11] https://cmusphinx.github.io/wiki/tutorialdict/ 
+[12] https://en.wikipedia.org/wiki/Acoustic_model 
+[13] <h2> Verwijs naar Voxforge_nl download pagina </h2>
+[14] https://cmusphinx.github.io/wiki/tutorialsphinx4/#basic-usage 
+[15] https://cmusphinx.github.io/wiki/tutorialsphinx4/#livespeechrecognizer 
+[16] <h2> Verwijs naar het document over G2P tools </h2>
+[17] https://github.com/cmusphinx/g2p-seq2seq 
+[18] <h2> Verwijs naar het script dat UvA zinnen split in woorden en in new_dict opslaat </h2>
+[19] <h2> Verwijs naar het script dat lege wit-regels verwijderd uit het new_dict bstand </h2>
+[20] <h2> Verwijs naar het document Beschrijving_UvA_data_processing.docx (dropbox) </h2>
+[21] <h2> Verwijs naar het document gesprek met Roelant Ossewaarde over Afasie </h2>
+[22] <h2> Verwijs naar de foto van phoneme boundary / diphone classifier. </h2>
+[23] <h2> Verwijs naar het document op drive over Kaldi window framing </h2>
+[24] <h2> Verwijs naar de pykaldi_features.ipynb waar je Kaldi MFCC plot </h2>
+[25] http://kaldi-asr.org/doc/kaldi_for_dummies.html 
+[26] <h2> Verwijs naar de 2e presentatie </h2>
