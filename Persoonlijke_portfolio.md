@@ -35,7 +35,9 @@
 <h2> Behaalde courses </h2>
 Hieronder zijn de door mij behaalde courses te vinden
 <h3> Datacamp </h3>
-- pics
+<p>De afgeronde Datacamp is in 2 delen gesplitst, omdat het niet op 1 plaatje paste. Het eerste deel is alfabetisch van A naar Z gescreenshot en het tweede deel van Z naar A.</p>
+<img src="Datacamp_success1.png" alt="Datacamp afgerond eerste deel" />
+<img src="Datacamp_success2.png" alt="Datacamp afgerond tweede deel" />
 <h3> Coursera </h3>
 -	pics
 <h2> Domain Knowledge </h2>
