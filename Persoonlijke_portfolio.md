@@ -82,7 +82,7 @@ Hieronder zijn de door mij behaalde courses te vinden
 
 <h2> Predictive models </h2>
 <h3> G2p-seq2seq </h3>
-<p>Op figuur 8 is het gebruik van het nieuw getrainde model te zien wat bij <a href="https://github.com/troley/project-aphasia/edit/master/Persoonlijke_portfolio.md#Diagnostics-of-the-learning-process">Diagnostics of the learning process</a> toegelicht wordt. Ik schreef wat woorden op en de g2p interactive sessie genereerde de bijbehorende klanken. Deze konden vervolgens opgeslagen worden in een woordenlijst.</p>
+<p>Op figuur 8 is het gebruik van het nieuw getrainde model te zien wat bij <a href="https://github.com/troley/project-aphasia/blob/master/Persoonlijke_portfolio.md#-g2p-seq2seq--1">Diagnostics of the learning process</a> toegelicht wordt. Ik schreef wat woorden op en de g2p interactive sessie genereerde de bijbehorende klanken. Deze konden vervolgens opgeslagen worden in een woordenlijst.</p>
 <img src="g2p-seq2seq-new-model-usage.png" alt="Gebruik van een nieuw model met g2p-seq2seq" />
 <i>Figuur 8</i>
 <br>
