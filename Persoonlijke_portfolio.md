@@ -72,9 +72,13 @@ Hieronder zijn de door mij behaalde courses te vinden
 <h2> Domain Knowledge </h2>
 <h3> Used jargon </h3>
 <ul>
-  <li><b>g2p-seq2seq</b>: Een tool dat met behulp van een bestaande woordenlijst met woorden en klanken, de lijst kan uitbreiden met nieuwe woorden en klanken. Voorafgaand dient eerst een model getraind te worden gebaseerd op de bestaande lijst.</li>
+  <li><b>ASR</b>: ASR staat voor Automatic Speech Recognition. Vertaald betekent dit Automatische spraakherkenning.</li>
+  <li><b>g2p-seq2seq</b>: Een <a href="https://github.com/cmusphinx/g2p-seq2seq">tool</a> dat met behulp van een bestaande woordenlijst met woorden en klanken, de lijst kan uitbreiden met nieuwe woorden en klanken. Voorafgaand dient eerst een model getraind te worden gebaseerd op de bestaande lijst.</li>
   <li><b>g2p-seq2seq interactive sessie</b>: een sessie van de g2p-seq2seq tool die met een commando opgestart kan worden, waarbij woorden in de terminal geschreven kunnen worden en de tool genereert de bijbehorende klanken.</li>
-  <li><b>loss</b>: Loss willen we zo laag mogelijk krijgen tijdens het trainen van een model. Het geeft aan hoe goed of slecht het model is geoptimaliseerd. Hogere percentage betekent slechter getraind. <a href="https://stackoverflow.com/a/42076606/7804385">[1]</a>
+  <li><b>Loss</b>: <a href="https://stackoverflow.com/a/42076606/7804385">Loss</a> willen we zo laag mogelijk krijgen tijdens het trainen van een model. Het geeft aan hoe goed of slecht het model is geoptimaliseerd. Hogere percentage betekent slechter getraind.
+  <li><b>Phoneme</b>: Een phoneme is een klank. Bijvoorbeeld in het woord "muis" zijn m ui s de phonemen.</li>
+  <li><b>Diphone</b>: Een diphone is een tweeklank. Binen dit project wordt hiernaar gerefereerd bij elke combinatie van twee opeenvolgende klanken samen. Voorbeeld: "Beker" wordt Be ek ke er</li> 
+  <li><b>Avatar</b>: Avatar is de naam van de uiteindelijke ASR applicatie die Afasie patienten bij het revalidatieproces zal helpen.</li>
 </ul>
 <h3> Literature </h3>
 -	Referentie links uit eerste portfolio
@@ -92,7 +96,8 @@ Hieronder zijn de door mij behaalde courses te vinden
 -	Python bestand door sprekers ingesproken woorden in een set() krijgen
 
 <h2> Data visualization </h2>
--	Mfcc plot 
+<h3> (Py)Kaldi MFCC </h3>
+<p>In latere sprints hadden we de focus gelegd op het tonen van klanken op het scherm bij een verkeerd/onbekend woord dat een Afasie patient tegen de Avatar zal uitspreken. Het uitgesproken woord wordt in dat geval op basis van geluidsfrequentie niveau's ontleed en op basis daarvan worden de klanken gegenereerd. Mijn deel hierin was naar (Py)Kaldi MFCC functionaliteit kijken. Dit heb ik gedaan en heb het <a href="https://github.com/troley/project-aphasia/blob/master/pykaldi_features.ipynb">in dit Jupyter Notebook bestand</a> uiteindelijk ook geplot.</p>
 
 <h2> Data collection </h2>
 -	Voxforge NL data vinden, downloaden en gebruiken met Pocketsphinx en Kaldi
