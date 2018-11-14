@@ -61,12 +61,12 @@ Hieronder zijn de door mij behaalde courses te vinden
 <br>
 <i>Coursera week 3</i>
 <img src="coursera_wk3.png" alt="Coursera week 3 afgerond" />
-<i>Figuur 4</i>
+<i>Figuur 5</i>
 <br>
 <br>
 <i>Coursera week 6</i>
 <img src="coursera_wk6.png" alt="Coursera week 6 afgerond" />
-<i>Figuur 5</i>
+<i>Figuur 6</i>
 <br>
 <br>
 <h2> Domain Knowledge </h2>
@@ -84,14 +84,14 @@ Hieronder zijn de door mij behaalde courses te vinden
 <h3> G2p-seq2seq </h3>
 <p>We hebben een dictionary gevonden met Nederlandse woorden met het formaat <woord> <klank1> <klank2> <klank3> etc. Het oorspronkelijke doel was deze uit te breiden met eigen woorden die patienten verkeerd kunnen uitspreken. Hiervoor heb ik gekeken naar de tool g2p-seq2seq die op basis van een bestaand model (Nederlandse dictionary) kon leren hoe klanken voor nieuwe woorden kunnen worden voorspeld.</p>
   
-<p>Op het plaatje op figuur 6 is te zien dat het trainingsproces 16477 stappen (met groen onderstreept) had genomen en dat het model is geoptimaliseerd naar loss van 1.3% (met oranje onderstreept). De loss bleef tussen 0.9% en 1.5% schommelen en kwam niet meer tot nieuwe progressie, dus heb ik het trainigsproces gestopt op dit punt.</p>
+<p>Op het plaatje op figuur 7 is te zien dat het trainingsproces 16477 stappen (met groen onderstreept) had genomen en dat het model is geoptimaliseerd naar loss van 1.3% (met oranje onderstreept). De loss bleef tussen 0.9% en 1.5% schommelen en kwam niet meer tot nieuwe progressie, dus heb ik het trainigsproces gestopt op dit punt.</p>
 <img src="g2p-seq2seq-model-training.jpg" alt="Het trainen van een nieuw klanken voorspel model." />
-<i>Figuur 6</i>
-<br>
-<br>
-<p>Op figuur 7 is het gebruik van het nieuw getrainde model te zien. Ik schreef wat woorden op en de g2p interactive sessie genereerde de bijbehorende klanken. Deze konden vervolgens opgeslagen worden in een woordenlijst.</p>
-<img src="g2p-seq2seq-new-model-usage.png" alt="Gebruik van een nieuw model met g2p-seq2seq" />
 <i>Figuur 7</i>
+<br>
+<br>
+<p>Op figuur 8 is het gebruik van het nieuw getrainde model te zien. Ik schreef wat woorden op en de g2p interactive sessie genereerde de bijbehorende klanken. Deze konden vervolgens opgeslagen worden in een woordenlijst.</p>
+<img src="g2p-seq2seq-new-model-usage.png" alt="Gebruik van een nieuw model met g2p-seq2seq" />
+<i>Figuur 8</i>
 <br>
 <br>
 <h2> Data preparation </h2>
