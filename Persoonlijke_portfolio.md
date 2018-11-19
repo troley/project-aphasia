@@ -92,7 +92,8 @@ Hieronder zijn de door mij behaalde courses te vinden
 <br>
 <br>
 <h2> Data preparation </h2>
--	Python bestand Jesse en ik zinnen in goede format krijgen
+<h3> UvA data extractie unieke woorden </h3>
+<p>Mijn collega Jesse heeft weinig coding ervaring. In het team hebben we daarom afgesproken dat we Jesse wat eenvoudigere klusjes zouden laten programmeren. Hierbij is het notebook bestand <a href="https://github.com/troley/project-aphasia/blob/master/text_files_to_dict.ipynb">waarbij uit een tal UvA bestanden unieke woorden worden geextraheerd en in een nieuw bestand worden opgeslagen</a> een voorbeeld die Jesse heeft gecodeerd. Ik gaf hem hierbij tips hoe bepaalde dingen bereikt konden worden. Samen hebben wij hieraan gewerkt om unieke data uit een UvA dataset te krijgen.</p>
 -	Python bestand door sprekers ingesproken woorden in een set() krijgen
 
 <h2> Data visualization </h2>
