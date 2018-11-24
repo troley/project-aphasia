@@ -101,9 +101,24 @@ Hieronder zijn de door mij behaalde courses te vinden
 <p>In latere sprints hadden we de focus gelegd op het tonen van klanken op het scherm bij een verkeerd/onbekend woord dat een Afasie patient tegen de Avatar zal uitspreken. Het uitgesproken woord wordt in dat geval op basis van geluidsfrequentie niveau's ontleed en op basis daarvan worden de klanken gegenereerd. Mijn deel hierin was naar (Py)Kaldi MFCC functionaliteit kijken. Dit heb ik gedaan en heb het <a href="https://github.com/troley/project-aphasia/blob/master/pykaldi_features.ipynb">in dit Jupyter Notebook bestand</a> uiteindelijk ook geplot.</p>
 
 <h2> Data collection </h2>
--	Voxforge NL data vinden, downloaden en gebruiken met Pocketsphinx en Kaldi
--	Kaldi opnames van mensen verzamelen en verwerken in Kaldi
-
+<h3> Voxforge data </h3>
+<p>Bij de <a href="https://www.scrumwise.com/scrum/#/backlog-item/4045-research-pocketsphinx-repo/id-84641-12337-0">Scrumwise ticket</a> waar ik onderzoek deed naar PocketSphinx, ben ik VoxForge tegengekomen bij het lezen over <a href="https://cmusphinx.github.io/wiki/tutorialam/#data-preparation">Data preparation</a>. Ik heb verder gekeken naar VoxForge en kwam Nederlands gesproken taal data tegen. Hieruit was voor ons de dictionary het meest zeldzame bestand. Dit bestand hebben we zowel in PocketSphinx als in latere Kaldi experimenten gebruikt. Hieronder is een plaatje van de data die de Voxforge dictionary bevat.</p>
+<br>
+<img src="voxforge_dict_preview.png" alt="Een voorbeeld van de Voxforge woordenlijst." />
+<i>Figuur 8</i>
+<br>
+<br>
+<h3> Kaldi data </h3>
+<p>Om de <a href="kaldifordummies">Kaldi for Dummies tutorial</a> bij de <a href="https://www.scrumwise.com/scrum/#/backlog-item/4057-audio-van-10-mensen-verzamelen-voor-kaldi-example/id-84641-12493-2">Scrumwise ticket</a> te kunnen realiseren, heb ik van uiteindelijk 11 verschillende stemmen (inclusief syntetische) opnames verzameld waarin de getallen van één tot tien werden uitgesproken. Deze data heb ik volgens de tutorial verwerkt, zodat Kaldi er succesvol mee gerund kon worden.</p>
+<p>Hieronder is bij figuur 9 de data die als training set gebruikt zijn te zien em bij figuur 10 de data die als test set gebruikt zijn.</p>
+<img src="kaldi_dummies_training_set.png" alt="Kaldi for Dummies tutorial training data set." />
+<i>Figuur 9</i>
+<br>
+<br>
+<img src="kaldi_dummies_test_set.png" alt="Kaldi for Dummies tutorial test data set." />
+<i>Figuur 10</i>
+<br>
+<br>
 <h2> Evaluation </h2>
 -	G2p-seq2seq Word Error Rate plaatje laten zien
 <h2> Diagnostics of the learning process </h2>
@@ -112,7 +127,7 @@ Hieronder zijn de door mij behaalde courses te vinden
   
 <p>Op het plaatje op figuur 8 is te zien dat het trainingsproces 16477 stappen (met groen onderstreept) had genomen en dat het model is geoptimaliseerd naar loss van 1.3% (met oranje onderstreept). De loss bleef tussen 0.9% en 1.5% schommelen en kwam niet meer tot nieuwe progressie, dus heb ik het trainigsproces gestopt op dit punt.</p>
 <img src="g2p-seq2seq-model-training.jpg" alt="Het trainen van een nieuw klanken voorspel model." />
-<i>Figuur 8</i>
+<i>Figuur 11</i>
 
 <h2> Communication </h2>
 -	Presentaties
