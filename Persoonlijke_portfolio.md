@@ -25,13 +25,8 @@
 <p> Dit bestand dient als een readers’ guide van de door mij gemaakte items en behaalde resultaten tijdens het Applied Data Science Semester. </p>
 
 <p>Deze GitHub repository zal een aantal bestanden bevatten, die als bewijsmateriaal zullen dienen bij de activiteiten genoemd in deze samenvatting. </p>
-
 <br>
-
-<p><i> Een referentielijst met hyperlinks naar de bewijsmateriaal is onderaan dit bestand te vinden.</i></p>
-
 <br>
-
 <h2> Behaalde courses </h2>
 Hieronder zijn de door mij behaalde courses te vinden
 <h3> Datacamp </h3>
