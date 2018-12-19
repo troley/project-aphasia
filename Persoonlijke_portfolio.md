@@ -91,8 +91,8 @@ Hieronder zijn de door mij behaalde courses te vinden
 <p>Mijn collega Jesse heeft weinig coding ervaring. In het team hebben we daarom afgesproken dat we Jesse wat eenvoudigere klusjes zouden laten programmeren. Hierbij is het notebook bestand <a href="https://github.com/troley/project-aphasia/blob/master/text_files_to_dict.ipynb">waarbij uit een tal UvA bestanden unieke woorden worden geextraheerd en in een nieuw bestand worden opgeslagen</a> een voorbeeld die Jesse heeft gecodeerd. Ik gaf hem hierbij tips hoe bepaalde dingen bereikt konden worden. Samen hebben wij hieraan gewerkt om unieke data uit een UvA dataset te krijgen.</p>
 
 <h3> Audio segment extractie en processing </h3>
-<p><b>Het processen van Corpus Gesproken Nederlands (CGN) data voor seq2seq model training was een van mijn taken in sprint 7. Hiervoor heb ik een bestaande set aan csv bestanden (die eerder werd gemaakt door Jesse en Koray) gebruikt. Hierbij heb ik de 15 meest voorkomende woorden in de Nederlandse taal genomen, opgezocht en gesneden uit de audio bestanden van CGN. De gesneden audiobestanden heb ik opgeslagen en gebruikt voor het trainen van het seq2seq model.</b></p> 
-<p>De verdere details zijn in deze <a href="">ticket</a> te vinden.</p>
+<p>Het processen van Corpus Gesproken Nederlands (CGN) data voor seq2seq model training was een van mijn taken in sprint 7. Hiervoor heb ik een bestaande set aan csv bestanden (die eerder werd gemaakt door Jesse en Koray) gebruikt. Hierbij heb ik de 15 meest voorkomende woorden in de Nederlandse taal genomen, opgezocht en gesneden uit de audio bestanden van CGN. De gesneden audiobestanden heb ik opgeslagen en gebruikt voor het trainen van het seq2seq model.</p> 
+<p>De verdere details zijn in <a href="https://github.com/troley/project-aphasia/blob/master/audio_segment_extractor.ipynb">deze jupyter notebook</a> te vinden.</p>
 
 <h2> Data visualization </h2>
 <h3> (Py)Kaldi MFCC </h3>
