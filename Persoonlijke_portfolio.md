@@ -130,8 +130,8 @@ Hieronder zijn de door mij behaalde courses te vinden
 <h2> Communication </h2>
 <h3> Presentations </h3>
 <ul>
-  <li>First presentation done by Jesse and me can be found <a href="https://github.com/troley/project-aphasia/blob/master/ppt_aphasia_week_4.pdf">here</a> (my part is from slide 3 until the end)</li>
-  <li>Second presentation done by Erik and me can be found <a href="https://github.com/troley/project-aphasia/blob/master/ppt_aphasia_week_9.pdf">here</a> (my part is from slide 5 until the end)</li>
+  <li>Eerste presentatie gegeven door Jesse en mij is <a href="https://github.com/troley/project-aphasia/blob/master/ppt_aphasia_week_4.pdf">hier te vinden</a> (mijn deel vanaf slide 3 t/m het eind)</li>
+  <li>Tweede presentatie gegeven door Erik en mij is <a href="https://github.com/troley/project-aphasia/blob/master/ppt_aphasia_week_9.pdf">hier te vinden</a> (mijn deel vanaf slide 5 t/m het eind)</li>
 </ul>
 -	E-mail naar Roelant
 -	Research paper 
