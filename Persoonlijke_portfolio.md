@@ -76,9 +76,25 @@ Hieronder zijn de door mij behaalde courses te vinden
   <li><b>Avatar</b>: Avatar is de naam van de uiteindelijke ASR applicatie die Afasie patienten bij het revalidatieproces zal helpen.</li>
 </ul>
 <h3> Literature </h3>
--	Referentie links uit eerste portfolio
-<h3> Evaluation </h3>
-
+<h4> Algemeeen over Afasie </h4>
+<ul>
+  <li>https://www.afasienet.com/mensen/afasie/over-afasie/</li>
+  <li>https://www.hersenletsel-uitleg.nl/gevolgen/neurologische-gevolgen-nah/afasie-dysartrie-en-spraakapraxie-1</li>
+</ul>
+<h4> Sphinx en andere ASR tooling gerelateerd </h4>
+<ul>
+  <li>https://cmusphinx.github.io/wiki/tutoriallm/#language-models</li>
+  <li>https://cmusphinx.github.io/wiki/tutorialdict/</li>
+  <li>https://en.wikipedia.org/wiki/Acoustic_model</li>
+  <li>ftp://m170.limsi.fr/public/csl01.pdf</li>
+</ul>
+<h4> Sequence to sequence models </h4>
+<ul>
+  <li>https://www.analyticsvidhya.com/blog/2018/03/essentials-of-deep-learning-sequence-to-sequence-modelling-with-attention-part-i/</li>
+  <li>https://blog.keras.io/a-ten-minute-introduction-to-sequence-to-sequence-learning-in-keras.html</li>
+  <li>https://nlp.stanford.edu/~johnhew/public/14-seq2seq.pdf</li>
+</ul>
+<br>
 <h2> Predictive models </h2>
 <h3> G2p-seq2seq </h3>
 <p>Op figuur 7 is het gebruik van het nieuw getrainde model te zien wat bij <a href="https://github.com/troley/project-aphasia/blob/master/Persoonlijke_portfolio.md#-g2p-seq2seq--1">Diagnostics of the learning process</a> toegelicht wordt. Ik schreef wat woorden op en de g2p interactive sessie genereerde de bijbehorende klanken. Deze konden vervolgens opgeslagen worden in een woordenlijst.</p>
