@@ -74,6 +74,7 @@ Hieronder zijn de door mij behaalde courses te vinden
   <li><b>Phoneme</b>: Een phoneme is een klank. Bijvoorbeeld in het woord "muis" zijn m ui s de phonemen.</li>
   <li><b>Diphone</b>: Een diphone is een tweeklank. Binen dit project wordt hiernaar gerefereerd bij elke combinatie van twee opeenvolgende klanken samen. Voorbeeld: "Beker" wordt Be ek ke er</li> 
   <li><b>Avatar</b>: Avatar is de naam van de uiteindelijke ASR applicatie die Afasie patienten bij het revalidatieproces zal helpen.</li>
+  <li><b>CNN</b>: Staat voor Convolutional Neural Network. Het is een vorm van een neuraal netwerk in Machine Learning terminologie.</li>
 </ul>
 <h3> Literature </h3>
 <h4> Algemeeen over Afasie </h4>
@@ -100,6 +101,10 @@ Hieronder zijn de door mij behaalde courses te vinden
 <p>Op figuur 7 is het gebruik van het nieuw getrainde model te zien wat bij <a href="https://github.com/troley/project-aphasia/blob/master/Persoonlijke_portfolio.md#-g2p-seq2seq--1">Diagnostics of the learning process</a> toegelicht wordt. Ik schreef wat woorden op en de g2p interactive sessie genereerde de bijbehorende klanken. Deze konden vervolgens opgeslagen worden in een woordenlijst.</p>
 <img src="g2p-seq2seq-new-model-usage.png" alt="Gebruik van een nieuw model met g2p-seq2seq" />
 <i>Figuur 7</i>
+
+<h3> Malaria detection CNN </h3>
+<p>Naast het werken aan het project heb ik zelf ook nog een CNN gebouwd. Ik was tijdens het project veel bezig met tooling en kwam niet altijd aan het Data Science Machine Learning deel. Hiermee wil ik mijn opgedane skills bevestigen.</p>
+<p>In <a href="https://github.com/troley/project-aphasia/blob/master/Malaria_detection_CNN.ipynb">dit jupyter notebook</a> bestand is het predictive model deel te vinden onder de kopjes <b>Building / training a predictive model</b> en <b>Using predictive model</b></p>
 <br>
 <br>
 <h2> Data preparation </h2>
@@ -110,6 +115,11 @@ Hieronder zijn de door mij behaalde courses te vinden
 <p>Het processen van Corpus Gesproken Nederlands (CGN) data voor seq2seq model training was een van mijn taken in sprint 7. Hiervoor heb ik een bestaande set aan csv bestanden (die eerder werd gemaakt door Jesse en Koray) gebruikt. Hierbij heb ik de 15 meest voorkomende woorden in de Nederlandse taal genomen, opgezocht en gesneden uit de audio bestanden van CGN. De gesneden audiobestanden heb ik opgeslagen en gebruikt voor het trainen van het seq2seq model.</p> 
 <p>De verdere details zijn in <a href="https://github.com/troley/project-aphasia/blob/master/audio_segment_extractor.ipynb">deze jupyter notebook</a> te vinden.</p>
 
+<h3> Malaria detection CNN </h3>
+<p>Naast het werken aan het project heb ik zelf ook nog een CNN gebouwd. Ik was tijdens het project veel bezig met tooling en kwam niet altijd aan het Data Science Machine Learning deel. Hiermee wil ik mijn opgedane skills bevestigen.</p>
+<p>In <a href="https://github.com/troley/project-aphasia/blob/master/Malaria_detection_CNN.ipynb">dit jupyter notebook</a> bestand is het data preparation deel te vinden aan het begin onder het kopje <b>Data preparation</b></p>
+<br>
+<br>
 <h2> Data visualization </h2>
 <h3> (Py)Kaldi MFCC </h3>
 <p>In latere sprints hadden we de focus gelegd op het tonen van klanken op het scherm bij een verkeerd/onbekend woord dat een Afasie patient tegen de Avatar zal uitspreken. Het uitgesproken woord wordt in dat geval op basis van geluidsfrequentie niveau's ontleed en op basis daarvan worden de klanken gegenereerd. Mijn deel hierin was naar (Py)Kaldi MFCC functionaliteit kijken. Dit heb ik gedaan en heb het <a href="https://github.com/troley/project-aphasia/blob/master/pykaldi_features.ipynb">in dit Jupyter Notebook bestand</a> uiteindelijk ook geplot.</p>
@@ -134,7 +144,12 @@ Hieronder zijn de door mij behaalde courses te vinden
 <br>
 <br>
 <h2> Evaluation </h2>
+<h3> Malaria detection CNN </h3>
+<p>Naast het werken aan het project heb ik zelf ook nog een CNN gebouwd. Ik was tijdens het project veel bezig met tooling en kwam niet altijd aan het Data Science Machine Learning deel. Hiermee wil ik mijn opgedane skills bevestigen.</p>
+<p>In <a href="https://github.com/troley/project-aphasia/blob/master/Malaria_detection_CNN.ipynb">dit jupyter notebook</a> bestand is het evaluatie deel te vinden onder het kopje <b>Trained model evaluation</b></p>
+
 -	G2p-seq2seq Word Error Rate plaatje laten zien
+
 <h2> Diagnostics of the learning process </h2>
 <h3> G2p-seq2seq </h3>
 <p>We hebben een dictionary gevonden met Nederlandse woorden met het formaat &lt;woord&gt; &lt;klank1&gt; &lt;klank2&gt; &lt;klank3&gt; etc. Het oorspronkelijke doel was deze uit te breiden met eigen woorden die patienten verkeerd kunnen uitspreken. Hiervoor heb ik gekeken naar de tool g2p-seq2seq die op basis van een bestaand model (Nederlandse dictionary) kon leren hoe klanken voor nieuwe woorden kunnen worden voorspeld.</p>
@@ -142,6 +157,10 @@ Hieronder zijn de door mij behaalde courses te vinden
 <p>Op het plaatje op figuur 8 is te zien dat het trainingsproces 16477 stappen (met groen onderstreept) had genomen en dat het model is geoptimaliseerd naar loss van 13% (met oranje onderstreept). De loss bleef tussen 9% en 15% schommelen en kwam niet meer tot nieuwe progressie, dus heb ik het trainigsproces gestopt op dit punt.</p>
 <img src="g2p-seq2seq-model-training.jpg" alt="Het trainen van een nieuw klanken voorspel model." />
 <i>Figuur 11</i>
+
+<h3> Malaria detection CNN </h3>
+<p>Naast het werken aan het project heb ik zelf ook nog een CNN gebouwd. Ik was tijdens het project veel bezig met tooling en kwam niet altijd aan het Data Science Machine Learning deel. Hiermee wil ik mijn opgedane skills bevestigen.</p>
+<p>In <a href="https://github.com/troley/project-aphasia/blob/master/Malaria_detection_CNN.ipynb">dit jupyter notebook</a> bestand is het learning process diagnostics deel te vinden onder het kopje <b>Diagnostics of the learning process</b></p>
 
 <h2> Communication </h2>
 <h3> Presentations </h3>
