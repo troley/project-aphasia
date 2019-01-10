@@ -144,19 +144,23 @@ Hieronder zijn de door mij behaalde courses te vinden
 <br>
 <br>
 <h2> Evaluation </h2>
+<h3>G2p-seq2seq</h3>
+<p>Bij de g2p-seq2seq hoort ook de evaluatie van het geleerde model. De evaluatie die bij het framework, en bij dergelijke speech to text model frameworks gebruikt worden, is de Word Error Rate (WER) metric. Bij figuur 11 is de WER en accuracy te zien van de model evaluatie op 10% van de (test) data.</p>
+<img src="https://github.com/troley/project-aphasia/blob/master/word_error_rate.png" />
+<i>Figuur 11</i>
+<br>
+<br>
 <h3> Malaria detection CNN </h3>
 <p>Naast het werken aan het project heb ik zelf ook nog een CNN gebouwd. Ik was tijdens het project veel bezig met tooling en kwam niet altijd aan het Data Science Machine Learning deel. Hiermee wil ik mijn opgedane skills bevestigen.</p>
 <p>In <a href="https://github.com/troley/project-aphasia/blob/master/Malaria_detection_CNN.ipynb">dit jupyter notebook</a> bestand is het evaluatie deel te vinden onder het kopje <b>Trained model evaluation</b></p>
-
--	G2p-seq2seq Word Error Rate plaatje laten zien
 
 <h2> Diagnostics of the learning process </h2>
 <h3> G2p-seq2seq </h3>
 <p>We hebben een dictionary gevonden met Nederlandse woorden met het formaat &lt;woord&gt; &lt;klank1&gt; &lt;klank2&gt; &lt;klank3&gt; etc. Het oorspronkelijke doel was deze uit te breiden met eigen woorden die patienten verkeerd kunnen uitspreken. Hiervoor heb ik gekeken naar de tool g2p-seq2seq die op basis van een bestaand model (Nederlandse dictionary) kon leren hoe klanken voor nieuwe woorden kunnen worden voorspeld.</p>
   
-<p>Op het plaatje op figuur 8 is te zien dat het trainingsproces 16477 stappen (met groen onderstreept) had genomen en dat het model is geoptimaliseerd naar loss van 13% (met oranje onderstreept). De loss bleef tussen 9% en 15% schommelen en kwam niet meer tot nieuwe progressie, dus heb ik het trainigsproces gestopt op dit punt.</p>
+<p>Op het plaatje op figuur 12 is te zien dat het trainingsproces 16477 stappen (met groen onderstreept) had genomen en dat het model is geoptimaliseerd naar loss van 13% (met oranje onderstreept). De loss bleef tussen 9% en 15% schommelen en kwam niet meer tot nieuwe progressie, dus heb ik het trainigsproces gestopt op dit punt.</p>
 <img src="g2p-seq2seq-model-training.jpg" alt="Het trainen van een nieuw klanken voorspel model." />
-<i>Figuur 11</i>
+<i>Figuur 12</i>
 
 <h3> Malaria detection CNN </h3>
 <p>Naast het werken aan het project heb ik zelf ook nog een CNN gebouwd. Ik was tijdens het project veel bezig met tooling en kwam niet altijd aan het Data Science Machine Learning deel. Hiermee wil ik mijn opgedane skills bevestigen.</p>
