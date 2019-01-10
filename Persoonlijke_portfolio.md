@@ -179,5 +179,9 @@ Hieronder zijn de door mij behaalde courses te vinden
   <li>Tweede presentatie gegeven door Erik en mij is <a href="https://github.com/troley/project-aphasia/blob/master/ppt_aphasia_week_9.pdf">hier te vinden</a> (mijn deel vanaf slide 5 t/m het eind)</li>
   <li>Derde presentatie gegeven door Jesse en mij is <a href="https://github.com/troley/project-aphasia/blob/master/ppt_aphasia_week_16.pdf">hier te vinden</a> (mijn deel vanaf slide 5 t/m het eind)</li>
 </ul>
--	E-mail naar Roelant
 -	Research paper 
+
+<h2> Problem solving & tooling </h2>
+<h3> Kaldi toolkit experiments </h3>
+<p>Een taak waar ik heel wat tijd aan heb besteed, was het leren van een deel van de Kaldi toolkit. Het meeste van de tijd heb ik aan <a href="http://kaldi-asr.org/doc/kaldi_for_dummies.html">de eerder genoemde Dummies tutorial</a> besteed, waarin de basis van de Kaldi toolkit werd voorgesteld. In eerste instantie heb ik de originele Engelse versie nagemaakt en vervolgens heb ik hetzelfde in het Nederlands gedaan. De gebruikte Nederlandse verzamelde data worden <a href="https://github.com/troley/project-aphasia/blob/master/Persoonlijke_portfolio.md#user-content--kaldi-data-">hier</a> beschreven.</p>
+<p>Er is verder helaas weinig resultaat dat getoond kan worden omtrent het Kaldi werk, omdat ik tegen veel problemen aan liep tijdens het configureren van verschillende stappen bij het maken van een ASR programma in Kaldi. Uiteindelijk hebben we de focus op een ander topic gelegd en hebben we de Kaldi mogelijkheid laten liggen.</p>
