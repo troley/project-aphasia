@@ -179,7 +179,24 @@ Hieronder zijn de door mij behaalde courses te vinden
   <li>Tweede presentatie gegeven door Erik en mij is <a href="https://github.com/troley/project-aphasia/blob/master/ppt_aphasia_week_9.pdf">hier te vinden</a> (mijn deel vanaf slide 5 t/m het eind)</li>
   <li>Derde presentatie gegeven door Jesse en mij is <a href="https://github.com/troley/project-aphasia/blob/master/ppt_aphasia_week_16.pdf">hier te vinden</a> (mijn deel vanaf slide 5 t/m het eind)</li>
 </ul>
--	Research paper 
+
+<h3> Research Paper </h3>
+<p>Een van de taken was het schrijven van een research paper omvattend het project. Hieronder de door mij geschreven delen uit de research paper.</p>
+
+<h4>4.2 Existing speech to text solutions</h4>
+<p> For the automatic translation of speech to text there are several solutions readily available. In this section, a few solutions are being described which have been used to see whether one of the existing speech recognition solution will suffice for our project goal.</p>
+<h5>4.2.1 Google Speech-To-Text API</h5>
+<p> This project was started with a GSTT (Google Speech-To-Text) experiment. GSTT is an API (Application Programming Interface), which allows developers to implement speech to text solutions quickly and easily. </p>
+<p> Python library speech_recognition has been used for this purpose. speech_recognition is a high level ASR library. It allows the developer to, among others configure Google speech to text API to be used for ASR. </p>
+<p> First, GSTT has been used to predict spoken English words and sentences and later on to predict Dutch words and sentences. A microphone laptop has been used. It is also important to notice that it depends on the microphone how well the GSTT recognizes words. </p>
+<h5>4.2.2 Sphinx (PocketSphinx)</h5>
+<p>For this experiment, a minimalistic speech recognition was built program. A dictionary of just 10 Dutch words has been used. The program predicted around 8 out of 10 words correctly. Later, a dictionary file of around 1.4 million Dutch words has been used. Simple words e.g. “Hallo” were predicted correctly, but more difficult words e.g. “Experiment” were less frequently predicted correctly.</p>
+<h5> 4.3 G2p-seq2seq toolkit (depends-on PocketSphinx)</h5>
+<p>PocketSphinx works on a dictionary with words and phonemes. The dictionary in Sphinx already contained around 1.4 million unique Dutch words and phonemes which were considered enough for a first test. The model was trained with the words and phonemes to recognize which phonemes belong to a word.</p>
+<p>After the model has been trained, predictions could be made on new Dutch words which are not contained in the dictionary. The model predicted the phonemes that belong to the words. G2P-seq2seq model was used to generate the phonemes of a word.</p>
+<p>G2p-seq2seq can be found on GitHub (nurtas-m, 2016). The G2p-seq2seq repository contains clear instructions on how to install and use this toolkit. This toolkit already comes with a pre-trained English word to phoneme prediction model. The instructions can be found in the README.md file on GitHub. The process from README.md file has been repeated to train a Dutch predictive model.</p>
+<p> It is important that TensorFlow 1.8.0 or higher and Tensor2Tensor 1.6.6 or higher are installed at the time of writing this paper. We ran into multiple issues first when these versions were lower, so this is a must. </p>
+
 
 <h2> Problem solving & tooling </h2>
 <h3> Kaldi toolkit experiments </h3>
