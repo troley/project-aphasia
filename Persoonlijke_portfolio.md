@@ -74,7 +74,7 @@ Hieronder zijn de door mij behaalde courses te vinden
   <li><b>g2p-seq2seq interactive sessie</b>: een sessie van de g2p-seq2seq tool die met een commando opgestart kan worden, waarbij woorden in de terminal geschreven kunnen worden en de tool genereert de bijbehorende klanken.</li>
   <li><b>Loss</b>: <a href="https://stackoverflow.com/a/42076606/7804385">Loss</a> willen we zo laag mogelijk krijgen tijdens het trainen van een model. Het geeft aan hoe goed of slecht het model is geoptimaliseerd. Hogere percentage betekent slechter getraind.
   <li><b>Phoneme</b>: Een phoneme is een klank. Bijvoorbeeld in het woord "muis" zijn m ui s de phonemen.</li>
-  <li><b>Diphone</b>: Een diphone is een tweeklank. Binen dit project wordt hiernaar gerefereerd bij elke combinatie van twee opeenvolgende klanken samen. Voorbeeld: "Beker" wordt Be ek ke er</li> 
+  <li><b>Diphone</b>: Een diphone is een phoneme met de overgangsklank naar een andere phoneme. Binen dit project wordt hiernaar gerefereerd bij elke combinatie van twee opeenvolgende klanken samen. Voorbeeld: "Beker" wordt Be ek ke er</li> 
   <li><b>Avatar</b>: Avatar is de naam van de uiteindelijke ASR applicatie die Afasie patienten bij het revalidatieproces zal helpen.</li>
   <li><b>CNN</b>: Staat voor Convolutional Neural Network. Het is een vorm van een neuraal netwerk in Machine Learning terminologie.</li>
   <li><b>MFCC</b>: Staat voor Mel Frequency Cepstral Coefficient. Het is geluid omgezet naar features, floats in dit geval. Deze kunnen voor allerlei data science doeleinden gebruikt worden, zoals bijvoorbeeld data visualisatie.</li>
@@ -126,6 +126,9 @@ Hieronder zijn de door mij behaalde courses te vinden
 <h3> Audio segment extractie en processing </h3>
 <p>Het processen van Corpus Gesproken Nederlands (CGN) data voor seq2seq model training was een van mijn taken in sprint 7. Hiervoor heb ik een bestaande set aan csv bestanden (die eerder werd gemaakt door Jesse en Koray) gebruikt. Hierbij heb ik bij <a href="https://www.scrumwise.com/scrum/#/backlog-item/4298-de-meeste-voorkomende-woorden-in-de-cgn-data-in-een-nieuw-bestand-kopieren/id-84641-13034-61">deze Scrumwise ticket</a> de 15 meest voorkomende woorden in de Nederlandse taal genomen, opgezocht en gesneden uit de audio bestanden van CGN. De gesneden audiobestanden heb ik opgeslagen en gebruikt voor het trainen van het seq2seq model.</p> 
 <p>De verdere details zijn in <a href="https://github.com/troley/project-aphasia/blob/master/audio_segment_extractor.ipynb">deze jupyter notebook</a> te vinden.</p>
+
+<h3> Phoneme data extractie uit CGN </h3>
+<p>Een van datasets die nodig was voor het leren van de LSTM deep neural netwerk om phonemen te herkennen waren csv bestanden met de structuur begin_tijd,eind_tijd,phoneme,absolute_pad_naar_audio_bestand. Hiervoor heb ik een methode van Koray aangepast, om dit mogelijk te maken. De code en verdere toelichting kan in <a href="https://github.com/troley/project-aphasia/blob/master/awd_wav_phoneme_transformation.ipynb">dit jupyter notebook</a> gevonden worden.</p>
 
 <h3> Kaldi data </h3>
 <p>Naast de train en test set die Kaldi nodig had (toegelicht bij Data collection -> Kaldi data), waren er ook een aantal andere data preparation technieken die bij Kaldi toegepast moesten worden voor de data uit de train en test sets. Dit worden hier besproken.</p>
