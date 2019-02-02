@@ -27,6 +27,8 @@
 <p>Deze GitHub repository zal een aantal bestanden bevatten, die als bewijsmateriaal zullen dienen bij de activiteiten genoemd in deze samenvatting. </p>
 <br>
 <br>
+
+
 <h2> Behaalde courses </h2>
 Hieronder zijn de door mij behaalde courses te vinden
 <h3> Datacamp </h3>
@@ -102,6 +104,8 @@ Hieronder zijn de door mij behaalde courses te vinden
   <li>https://haythamfayek.com/2016/04/21/speech-processing-for-machine-learning.html</li>
 </ul>
 <br>
+
+
 <h2> Predictive models </h2>
 <h3> G2p-seq2seq </h3>
 <p>Op figuur 7 is het gebruik van het nieuw getrainde model te zien wat bij <a href="https://github.com/troley/project-aphasia/blob/master/Persoonlijke_portfolio.md#-g2p-seq2seq--1">Diagnostics of the learning process</a> toegelicht wordt. Ik schreef wat woorden op en de g2p interactive sessie genereerde de bijbehorende klanken. Deze konden vervolgens opgeslagen worden in een woordenlijst.</p>
@@ -113,6 +117,8 @@ Hieronder zijn de door mij behaalde courses te vinden
 <p>In <a href="https://github.com/troley/project-aphasia/blob/master/Malaria_detection_CNN.ipynb">dit jupyter notebook</a> bestand is het predictive model deel te vinden onder de kopjes <b>Building / training a predictive model</b> en <b>Using predictive model</b></p>
 <br>
 <br>
+
+
 <h2> Data preparation </h2>
 <h3> UvA data extractie unieke woorden </h3>
 <p>Mijn collega Jesse heeft weinig coding ervaring. In het team hebben we daarom afgesproken dat we Jesse wat eenvoudigere klusjes zouden laten programmeren. Hierbij is het notebook bestand <a href="https://github.com/troley/project-aphasia/blob/master/text_files_to_dict.ipynb">waarbij uit een tal UvA bestanden unieke woorden worden geextraheerd en in een nieuw bestand worden opgeslagen</a> een voorbeeld die Jesse heeft gecodeerd. Ik gaf hem hierbij tips hoe bepaalde dingen bereikt konden worden. Samen hebben wij hieraan gewerkt om unieke data uit een UvA dataset te krijgen.</p>
@@ -154,6 +160,8 @@ Hieronder zijn de door mij behaalde courses te vinden
 <p>In <a href="https://github.com/troley/project-aphasia/blob/master/Malaria_detection_CNN.ipynb">dit jupyter notebook</a> bestand is het data preparation deel te vinden aan het begin onder het kopje <b>Data preparation</b></p>
 <br>
 <br>
+
+
 <h2> Data visualization </h2>
 <h3> (Py)Kaldi MFCC </h3>
 <p>In latere sprints hadden we de focus gelegd op het tonen van klanken op het scherm bij een verkeerd/onbekend woord dat een Afasie patient tegen de Avatar zal uitspreken. Bij <a href="https://www.scrumwise.com/scrum/#/backlog-item/3718-split-audio-in-lesser-e-g-10-ms-bins-and-plot-this/id-84641-11740-0">deze</a> en <a href="https://www.scrumwise.com/scrum/#/backlog-item/3719-research-mfcc-of-kaldi-whether-hamming-window-is-processed-within-it/id-84641-11740-9">deze</a> Scrumwise tickets was het mijn doel om audio om te zetten naar MFCC en dit te visualiseren. Het uitgesproken woord wordt in dat geval op basis van geluidsfrequentie niveau's ontleed en op basis daarvan worden de klanken gegenereerd. Mijn deel hierin was naar (Py)Kaldi MFCC functionaliteit kijken. Dit heb ik gedaan en heb het <a href="https://github.com/troley/project-aphasia/blob/master/pykaldi_features.ipynb">in dit Jupyter Notebook bestand</a> uiteindelijk ook uitgewerkt en geplot.</p>
@@ -161,6 +169,7 @@ Hieronder zijn de door mij behaalde courses te vinden
 <h3> Malaria detection CNN </h3>
 <p>Naast het werken aan het project heb ik zelf ook nog een CNN gebouwd. Ik was tijdens het project veel bezig met tooling en kwam niet altijd aan het Data Science Machine Learning deel. Hiermee wil ik mijn opgedane skills bevestigen.</p>
 <p>In <a href="https://github.com/troley/project-aphasia/blob/master/Malaria_detection_CNN.ipynb">dit jupyter notebook</a> bestand is het data visualizatie deel te vinden onder het kopje <b>Data visualization</b></p>
+
 
 <h2> Data collection </h2>
 <h3> Voxforge data </h3>
@@ -203,6 +212,7 @@ Hieronder zijn de door mij behaalde courses te vinden
 <p>Naast het werken aan het project heb ik zelf ook nog een CNN gebouwd. Ik was tijdens het project veel bezig met tooling en kwam niet altijd aan het Data Science Machine Learning deel. Hiermee wil ik mijn opgedane skills bevestigen.</p>
 <p>In <a href="https://github.com/troley/project-aphasia/blob/master/Malaria_detection_CNN.ipynb">dit jupyter notebook</a> bestand is het evaluatie deel te vinden onder het kopje <b>Trained model evaluation</b></p>
 
+
 <h2> Diagnostics of the learning process </h2>
 <h3> G2p-seq2seq </h3>
 <p>We hebben een dictionary gevonden met Nederlandse woorden met het formaat &lt;woord&gt; &lt;klank1&gt; &lt;klank2&gt; &lt;klank3&gt; etc. Het oorspronkelijke doel was deze uit te breiden met eigen woorden die patienten verkeerd kunnen uitspreken. Hiervoor heb ik gekeken naar de tool g2p-seq2seq die op basis van een bestaand model (Nederlandse dictionary) kon leren hoe klanken voor nieuwe woorden kunnen worden voorspeld. Dit werd gerealiseerd bij <a href="https://www.scrumwise.com/scrum/#/backlog-item/3525-train-a-g2p-model-with-dutch-language/id-84641-11280-18">deze Scrumwise ticket</a>.</p>
@@ -244,4 +254,10 @@ Hieronder zijn de door mij behaalde courses te vinden
 <h2> Problem solving & tooling </h2>
 <h3> Kaldi toolkit experiments </h3>
 <p>Een taak waar ik heel wat tijd aan heb besteed, was het leren van een deel van de Kaldi toolkit. Het meeste van de tijd heb ik aan <a href="http://kaldi-asr.org/doc/kaldi_for_dummies.html">de eerder genoemde Dummies tutorial</a> besteed, waarin de basis van de Kaldi toolkit werd voorgesteld. In eerste instantie heb ik de originele Engelse versie nagemaakt en vervolgens heb ik hetzelfde in het Nederlands gedaan. De gebruikte Nederlandse verzamelde data worden <a href="https://github.com/troley/project-aphasia/blob/master/Persoonlijke_portfolio.md#user-content--kaldi-data-">hier</a> beschreven.</p>
-<p>Er is verder helaas weinig resultaat dat getoond kan worden omtrent het Kaldi werk, omdat ik tegen veel problemen aan liep tijdens het configureren van verschillende stappen bij het maken van een ASR programma in Kaldi. Uiteindelijk hebben we de focus op een ander topic gelegd en hebben we de Kaldi mogelijkheid laten liggen.</p>
+<p>Hieronder op figuur 19 is het resultaat te zien van de predictions van het Kaldi model op de Engelse test set (gesproken door Koray).Er is voor elke prediction een rode pijl getekend om het duidelijk te maken. De tekst die na het bestandsnaam komt is de prediction. <b>Voorbeeld</b>: koray_1_2_3 one seven eight. One seven eight is de prediction (bij 100% accuracy zou dit one two three zijn).</p>
+<img src="Kaldi_English_prediction_result.png" alt="Kaldi prediction results." />
+<i>Figuur 19</i>
+<p>Er is verder helaas weinig resultaat dat getoond kan worden omtrent het Kaldi_NL (met Nederlandse dataset) werk. Ik liep constant tegen nieuwe problemen aan tijdens het configureren en runnen van Kaldi_NL. Dit is niet zo zeer het probleem van het Kaldi_NL framework - het is gewoonlijk dat het maken van ASR in Kaldi een lastige taak is - maar meer van de tijd die er in moet worden geinvesteerd om het werkend te krijgen. Uiteindelijk hebben we de focus op de fonemen topic gelegd en hebben we de Kaldi mogelijkheid laten liggen.</p>
+<p>Bij figuur 20 is de error te zien waar ik als laatste tegen aan liep bij het runnen van de Kaldi ASR, voordat ik aan de fonemen taken begon. De audio bestanden die mee worden geleverd worden waarschijnlijk niet herkend. Dat is op te merken uit de "Duration of speech: 0h:0m:0s" error lijn. Hier zou verder naar moeten worden gekeken.</p><p><i>De doorgestreepte items zijn mijn log berichten uit een van de gerunde Perl scripts.</i></p>
+<img src="Kaldi_NL_result_error.png" alt="Kaldi_NL bash run command error." />
+<i>Figuur 20</i>
