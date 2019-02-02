@@ -121,6 +121,34 @@ Hieronder zijn de door mij behaalde courses te vinden
 <p>Het processen van Corpus Gesproken Nederlands (CGN) data voor seq2seq model training was een van mijn taken in sprint 7. Hiervoor heb ik een bestaande set aan csv bestanden (die eerder werd gemaakt door Jesse en Koray) gebruikt. Hierbij heb ik bij <a href="https://www.scrumwise.com/scrum/#/backlog-item/4298-de-meeste-voorkomende-woorden-in-de-cgn-data-in-een-nieuw-bestand-kopieren/id-84641-13034-61">deze Scrumwise ticket</a> de 15 meest voorkomende woorden in de Nederlandse taal genomen, opgezocht en gesneden uit de audio bestanden van CGN. De gesneden audiobestanden heb ik opgeslagen en gebruikt voor het trainen van het seq2seq model.</p> 
 <p>De verdere details zijn in <a href="https://github.com/troley/project-aphasia/blob/master/audio_segment_extractor.ipynb">deze jupyter notebook</a> te vinden.</p>
 
+<h3> Kaldi data </h3>
+<p>Naast de train en test set die Kaldi nodig had (toegelicht bij Data collection -> Kaldi data), waren er ook een aantal andere data preparation technieken die bij Kaldi toegepast moesten worden voor de data uit de train en test sets. Dit worden hier besproken.</p>
+<p>Bij dit voorbeeld zijn alleen plaatjes gebruikt van de train set, om het beknopt te houden. Daarom bevatten sommige plaatjes niet alle data, omdat ze anders te groot en onleesbaar zouden worden. Overigens gebeurt bij de test set exact hetzelfde wat hier gepresenteerd wordt met de train set.</p>
+<p>Hieronder volgt de lisjt van de data preparation technieken en een korte toelichting:</p>
+<ol>
+  <li><b>spk2gender bestand creëren</b>: Dit bestand bevat alle namen van sprekers met achter de naam het geslacht. De letter 'f' (=female) of 'm' (=male) worden hiervoor gebruikt. (Figuur 8)</li>
+  <li><b>text bestand creëren</b>: Dit bestand bevat voor elk audio bestand de naam van het bestand met daarnaast de gesproken tekst  (Figuur 9)</li>
+  <li><b>utt2spk bestand creëren</b>: Hierin bevinden zich de bestandensnamen per spreker met daarnaast de naam van de specifieke spreker. (Figuur 10)</li>
+  <li><b>wav.scp bestand creëren</b>: Dit bestand bevat voor elk audio bestand de naam van het audio bestand met daarnaast het absolute pad naar het audio bestand. (Figuur 11)</li>
+</ol>
+<br>
+<br>
+<img src="https://github.com/troley/project-aphasia/blob/master/spk2gender_digits.png" alt="Kaldi speaker name and his/her gender" />
+<i>Figuur 8</i>
+<br>
+<br>
+<img src="https://github.com/troley/project-aphasia/blob/master/text_digits.png" alt="Kaldi speaker audio file and the spoken text." />
+<i>Figuur 9</i>
+<br>
+<br>
+<img src="https://github.com/troley/project-aphasia/blob/master/utt2spk_digits.png" alt="Kaldi speaker audio file and the speaker's name." />
+<i>Figuur 10</i>
+<br>
+<br>
+<img src="https://github.com/troley/project-aphasia/blob/master/wav.scp_digits.png" alt="Kaldi speaker audio file and the absolute path to the corresponding file." />
+<i>Figuur 11</i>
+<br>
+<br>
 <h3> Malaria detection CNN </h3>
 <p>Naast het werken aan het project heb ik zelf ook nog een CNN gebouwd. Ik was tijdens het project veel bezig met tooling en kwam niet altijd aan het Data Science Machine Learning deel. Hiermee wil ik mijn opgedane skills bevestigen.</p>
 <p>In <a href="https://github.com/troley/project-aphasia/blob/master/Malaria_detection_CNN.ipynb">dit jupyter notebook</a> bestand is het data preparation deel te vinden aan het begin onder het kopje <b>Data preparation</b></p>
@@ -136,28 +164,39 @@ Hieronder zijn de door mij behaalde courses te vinden
 
 <h2> Data collection </h2>
 <h3> Voxforge data </h3>
-<p>Bij de <a href="https://www.scrumwise.com/scrum/#/backlog-item/4045-research-pocketsphinx-repo/id-84641-12337-0">Scrumwise ticket</a> waar ik onderzoek deed naar PocketSphinx, ben ik VoxForge tegengekomen bij het lezen over <a href="https://cmusphinx.github.io/wiki/tutorialam/#data-preparation">Data preparation</a>. Ik heb verder gekeken naar VoxForge en kwam Nederlands gesproken taal data tegen. Hieruit was voor ons de dictionary het meest zeldzame bestand. Dit bestand hebben we zowel in PocketSphinx als in latere Kaldi experimenten gebruikt. Hieronder is een plaatje van de data die de Voxforge dictionary bevat.</p>
+<p>Bij de <a href="https://www.scrumwise.com/scrum/#/backlog-item/4045-research-pocketsphinx-repo/id-84641-12337-0">Scrumwise ticket</a> waar ik onderzoek deed naar PocketSphinx, ben ik VoxForge tegengekomen bij het lezen over <a href="https://cmusphinx.github.io/wiki/tutorialam/#data-preparation">Data preparation</a>. Ik heb verder gekeken naar VoxForge en kwam Nederlands gesproken taal data tegen. Hieruit was voor ons de dictionary het meest zeldzame bestand. Dit bestand hebben we zowel in PocketSphinx als in latere Kaldi experimenten gebruikt. Hieronder is een plaatje te zien bij figuur 12 van de data die de Voxforge dictionary bevat.</p>
 <br>
 <img src="voxforge_dict_preview.png" alt="Een voorbeeld van de Voxforge woordenlijst." />
-<i>Figuur 8</i>
+<i>Figuur 12</i>
 <br>
 <br>
 <h3> Kaldi data </h3>
-<p>Om de <a href="kaldifordummies">Kaldi for Dummies tutorial</a> bij de <a href="https://www.scrumwise.com/scrum/#/backlog-item/4057-audio-van-10-mensen-verzamelen-voor-kaldi-example/id-84641-12493-2">Scrumwise ticket</a> te kunnen realiseren, heb ik van uiteindelijk 11 verschillende stemmen (inclusief syntetische) opnames verzameld waarin de getallen van één tot tien werden uitgesproken. Deze data heb ik volgens de tutorial verwerkt, zodat Kaldi er succesvol mee gerund kon worden.</p>
-<p>Hieronder is bij figuur 9 de data die als training set gebruikt zijn te zien em bij figuur 10 de data die als test set gebruikt zijn.</p>
+<h4> Engelse dataset </h4>
+<p>Om de <a href="http://kaldi-asr.org/doc/kaldi_for_dummies.html">Kaldi for Dummies tutorial</a> bij de <a href="https://www.scrumwise.com/scrum/#/backlog-item/4057-audio-van-10-mensen-verzamelen-voor-kaldi-example/id-84641-12493-2">Scrumwise ticket</a> te kunnen realiseren, heb ik van uiteindelijk 11 verschillende stemmen (inclusief syntetische) opnames verzameld waarin de getallen van één tot tien in het Engels werden uitgesproken. Deze data heb ik volgens de tutorial verwerkt, zodat Kaldi er succesvol mee gerund kon worden.</p>
+<p>Hieronder is bij figuur 13 de data die als training set gebruikt zijn te zien en bij figuur 14 de data die als test set gebruikt zijn.</p>
 <img src="kaldi_dummies_training_set.png" alt="Kaldi for Dummies tutorial training data set." />
-<i>Figuur 9</i>
+<i>Figuur 13</i>
 <br>
 <br>
 <img src="kaldi_dummies_test_set.png" alt="Kaldi for Dummies tutorial test data set." />
-<i>Figuur 10</i>
+<i>Figuur 14</i>
+<br>
+<br>
+<h4> Nederlandse dataset </h4>
+<p>Hetzelfde wat bij Engelse dataset beschreven staat, is ook van toepassing geweest bij de Nederlandse data voor het Kaldi_NL experiment. Er dient een train en een test set gecreërd te worden. Hiervoor heb ik een aantal audio bestanden uit de Corpus Gesproken Nederlands dataset geëxtraheerd en in de juiste mappen geplaatst. Het waren maar een paar bestanden, om te kijken of het experiment daarmee überhaupt gerund kan worden. Vervolgens is het uiteraard van bealng geweest om meer data te gebruiken. Bij Figuren 15 en 16 zijn de train en test datasets te zien.</p>
+<img src="Kaldi_dummies_train_set_NL.png" alt="Kaldi for Dummies tutorial Nederlandse train data set." />
+<i>Figuur 15</i>
+<br>
+<br>
+<img src="Kaldi_dummies_test_set_NL.png" alt="Kaldi for Dummies tutorial Nederlandse test data set." />
+<i>Figuur 16</i>
 <br>
 <br>
 <h2> Evaluation </h2>
 <h3>G2p-seq2seq</h3>
-<p>Bij de g2p-seq2seq hoort ook de evaluatie van het geleerde model. De evaluatie die bij het framework, en bij dergelijke speech to text model frameworks gebruikt worden, is de Word Error Rate (WER) metric. Bij figuur 11 is de WER en accuracy te zien van de model evaluatie op 10% van de (test) data.</p>
+<p>Bij de g2p-seq2seq hoort ook de evaluatie van het geleerde model. De evaluatie die bij het framework, en bij dergelijke speech to text model frameworks gebruikt worden, is de Word Error Rate (WER) metric. Bij figuur 17 is de WER en accuracy te zien van de model evaluatie op 10% van de (test) data.</p>
 <img src="https://github.com/troley/project-aphasia/blob/master/word_error_rate.png" />
-<i>Figuur 11</i>
+<i>Figuur 17</i>
 <br>
 <br>
 <h3> Malaria detection CNN </h3>
@@ -168,9 +207,9 @@ Hieronder zijn de door mij behaalde courses te vinden
 <h3> G2p-seq2seq </h3>
 <p>We hebben een dictionary gevonden met Nederlandse woorden met het formaat &lt;woord&gt; &lt;klank1&gt; &lt;klank2&gt; &lt;klank3&gt; etc. Het oorspronkelijke doel was deze uit te breiden met eigen woorden die patienten verkeerd kunnen uitspreken. Hiervoor heb ik gekeken naar de tool g2p-seq2seq die op basis van een bestaand model (Nederlandse dictionary) kon leren hoe klanken voor nieuwe woorden kunnen worden voorspeld. Dit werd gerealiseerd bij <a href="https://www.scrumwise.com/scrum/#/backlog-item/3525-train-a-g2p-model-with-dutch-language/id-84641-11280-18">deze Scrumwise ticket</a>.</p>
   
-<p>Op het plaatje op figuur 12 is te zien dat het trainingsproces 16477 stappen (met groen onderstreept) had genomen en dat het model is geoptimaliseerd naar loss van 13% (met oranje onderstreept). De loss bleef tussen 9% en 15% schommelen en kwam niet meer tot nieuwe progressie, dus heb ik het trainigsproces gestopt op dit punt.</p>
+<p>Op het plaatje op figuur 18 is te zien dat het trainingsproces 16477 stappen (met groen onderstreept) had genomen en dat het model is geoptimaliseerd naar loss van 13% (met oranje onderstreept). De loss bleef tussen 9% en 15% schommelen en kwam niet meer tot nieuwe progressie, dus heb ik het trainigsproces gestopt op dit punt.</p>
 <img src="g2p-seq2seq-model-training.jpg" alt="Het trainen van een nieuw klanken voorspel model." />
-<i>Figuur 12</i>
+<i>Figuur 18</i>
 
 <h3> Malaria detection CNN </h3>
 <p>Naast het werken aan het project heb ik zelf ook nog een CNN gebouwd. Ik was tijdens het project veel bezig met tooling en kwam niet altijd aan het Data Science Machine Learning deel. Hiermee wil ik mijn opgedane skills bevestigen.</p>
